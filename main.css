@@ -1,0 +1,391 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,600;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: #131B2D;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .all {
+  width: 650px;
+  height: 90%;
+  padding: 25px;
+}
+
+.container .all .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+
+.container .all .header a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .all .header a img {
+  width: 36px;
+}
+
+.container .all .header p {
+  color: aliceblue;
+}
+
+.container .all .search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 40px;
+  background-color: #1F2947;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 20px;
+}
+
+.container .all .search i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+}
+
+.container .all .search i img {
+  width: 28px;
+}
+
+.container .all .search input {
+  width: 100%;
+  height: 100%;
+  padding-left: 40px;
+  border: none;
+  color: #fff;
+  background-color: transparent;
+  outline: none;
+}
+
+.container .all .search .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60px;
+  height: 70%;
+  background-color: #037AFF;
+  border-radius: 6px;
+  font-size: 10px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.container .all .output {
+  width: 100%;
+  height: 350px;
+  background-color: #1F2947;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.container .all .output img {
+  height: 150px;
+  border-radius: 50%;
+  margin: 20px;
+  margin-right: 30px;
+}
+
+.container .all .output .bilgi {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .all .output .bilgi div .ilk {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .all .output .bilgi div .ilk h2 {
+  color: #fff;
+  font-weight: 600;
+}
+
+.container .all .output .bilgi div .ilk p {
+  font-size: 14px;
+  color: #fff;
+  font-weight: 400;
+  opacity: 0.6;
+}
+
+.container .all .output .bilgi p {
+  color: #fff;
+}
+
+.container .all .output .bilgi div .takip {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #131B2D;
+  border-radius: 5px;
+  padding: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-right: 10px;
+}
+
+.container .all .output .bilgi div .takip a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-decoration: none;
+}
+
+.container .all .output .bilgi div .takip a h3 {
+  color: #fff;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.container .all .output .bilgi div .takip a h2 {
+  color: #fff;
+  font-size: 22px;
+}
+
+.container .all .output .bilgi div .alt-bilgi {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.container .all .output .bilgi div .alt-bilgi div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .all .output .bilgi div .alt-bilgi div a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
+  text-decoration: none;
+}
+
+.container .all .output .bilgi div .alt-bilgi div a img {
+  height: 20px;
+  margin: 0;
+  margin-right: 10px;
+}
+
+.container .all .last-searchs {
+  width: 100%;
+  height: 25%;
+  background-color: #1F2947;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.container .all .last-searchs h3 {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.container .all .last-searchs div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.container .all .last-searchs div a {
+  color: #fff;
+  text-decoration: none;
+  background-color: #131B2D;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 20px;
+  margin: 2px;
+}
+
+.repo-follow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.repo-follow div {
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 10px;
+  background-color: #1F2947;
+  z-index: 2;
+  position: fixed;
+  height: 90%;
+}
+
+.repo-follow div .close {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 25px;
+  top: 20px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.repo-follow div .close img {
+  color: #fff;
+  width: 20px;
+}
+
+.repo-follow div h3 {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  margin-bottom: 10px;
+}
+
+.repo-follow div a {
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.repo-follow .follow {
+  width: 28%;
+  left: 1%;
+  opacity: 0;
+}
+
+.repo-follow .repos {
+  left: 30%;
+  width: 40%;
+  opacity: 0;
+}
+
+.repo-follow .following {
+  width: 28%;
+  right: 1%;
+  opacity: 0;
+}
+/*# sourceMappingURL=main.css.map */
