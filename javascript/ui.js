@@ -8,6 +8,9 @@ class UI {
         this.altBilgi = document.getElementById("alt-bilgi");
         this.inpustField = document.getElementById("githubname");
         this.bio = document.getElementById("bio");
+        this.reposAdd = document.getElementById("repos-add");
+        this.followersAdd = document.getElementById("followers-add");
+        this.followingAdd = document.getElementById("following-add");
     }
     clearInput() {
         this.inpustField.value = "";
@@ -71,10 +74,36 @@ class UI {
                 ${user.twitter_username}                   
             </a>
         </div>
-        `
+        `    
+    }
+    showRepoInfo(repos) {
+        this.reposAdd.innerHTML = "";
 
+        repos.forEach(repo => {
+            this.reposAdd.inner += `
+            <a href="${repo.html_url}">${repo.name}</a>
+            `
+        });
 
-    
-    
+    }
+
+    showFollowersInfo(follows) {
+        this.followersAdd.innerHTML = "";
+
+        follows.forEach(follows => {
+            this.followersAdd.innerHTML += `
+            <a href="${follows.html_url}">${follows.login}</a>
+            `
+        });
+    }
+
+    showFollowingInfo(following) {
+        this.followingAdd.innerHTML = "";
+
+        following.forEach(following => {
+            this.followingAdd.innerHTML += `
+            <a href="${following.html_url}">${following.login}</a>
+            `
+        });
     }
 }

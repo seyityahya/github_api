@@ -12,6 +12,9 @@ const followingClose = document.getElementById("following-close");
 const reposClose = document.getElementById("repos-close");
 const followersClose = document.getElementById("followers-close");
 const img = document.getElementById("image");
+const followersScreen = document.getElementById("follow-screen");
+const reposScreen = document.getElementById("repos-screen");
+const followingScreen = document.getElementById("following-screen");
 
 const github = new Github();
 const ui = new UI();
@@ -22,6 +25,9 @@ function eventListeners() {
     githubForm.addEventListener("submit",getData);
     clearLastUsers.addEventListener("click",clearAllSearched);
     document.addEventListener("DOMContentLoaded",getAllSearched);
+    follow.addEventListener("click",followersActive);
+    repos.addEventListener("click",reposActive);
+    following.addEventListener("click",followingActive);
 }
 
 function getData(e) {
@@ -35,13 +41,16 @@ function getData(e) {
         .then(response =>{
             if (response.user.message === "Not Found") {
                 //Hata Mesajı
-                console.log("Hata");
+                alert("Lütfen geçerli bir kullanıcı adı girin.");
             }
             else {
                 ilkEkran.style.zIndex = -1;
                 profile.style.opacity = 1;
                 img.style.opacity = 1;
                 ui.showUserInfo(response.user);
+                ui.showRepoInfo(response.repo);
+                ui.showFollowersInfo(response.followers);
+                ui.showFollowingInfo(response.following);
             }
         })
         .catch(err => console.log(err));
@@ -57,4 +66,14 @@ function clearAllSearched() {
 
 function getAllSearched() {
     //Arananları Storagedan al ve ui ye ekle
+}
+
+function followersActive() {
+    followersScreen.style.zIndex = 1;
+}
+function reposActive() {
+    reposScreen.style.zIndex = 1;
+}
+function followingActive() {
+    followingScreen.style.zIndex =1;
 }

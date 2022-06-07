@@ -373,7 +373,7 @@
           align-items: center;
 }
 
-.repo-follow div {
+.repo-follow .repos {
   padding: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -386,9 +386,14 @@
   background-color: #1F2947;
   position: fixed;
   height: 90%;
+  overflow-y: scroll;
 }
 
-.repo-follow div .close {
+.repo-follow .repos::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.repo-follow .repos .close {
   position: absolute;
   width: 30px;
   height: 30px;
@@ -407,38 +412,48 @@
           align-items: center;
 }
 
-.repo-follow div .close img {
+.repo-follow .repos .close img {
   color: #fff;
   width: 20px;
 }
 
-.repo-follow div h3 {
+.repo-follow .repos h3 {
   color: #fff;
   border-bottom: 1px solid #fff;
   margin-bottom: 10px;
 }
 
-.repo-follow div a {
+.repo-follow .repos div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.repo-follow .repos div a {
   color: #fff;
   text-decoration: none;
   margin-bottom: 10px;
 }
 
-.repo-follow .follow {
+.repo-follow #follow-screen {
   width: 28%;
   left: 1%;
-  z-index: -1;
+  z-index: 1;
 }
 
-.repo-follow .repos {
+.repo-follow #repos-screen {
   left: 30%;
   width: 40%;
   z-index: -1;
 }
 
-.repo-follow .following {
+.repo-follow #following-screen {
   width: 28%;
   right: 1%;
-  z-index: -1;
+  z-index: 1;
 }
 /*# sourceMappingURL=main.css.map */

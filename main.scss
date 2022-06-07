@@ -238,7 +238,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    div {
+    .repos {
         padding: 30px;
         display: flex;
         flex-direction: column;
@@ -246,6 +246,10 @@
         background-color: #1F2947;
         position: fixed;
         height: 90%;
+        overflow-y: scroll;
+        &::-webkit-scrollbar {
+            -webkit-appearance: none;
+        }
         .close {
             position: absolute;
             width: 30px;
@@ -267,25 +271,29 @@
             border-bottom: 1px solid #fff;
             margin-bottom: 10px;
         }
-        a {
-            color: #fff;
-            text-decoration: none;
-            margin-bottom: 10px;
-        }
+        div {
+            display: flex;
+            flex-direction: column;
+            a {
+                color: #fff;
+                text-decoration: none;
+                margin-bottom: 10px;
+            } 
+        } 
     }
-    .follow {
+    #follow-screen {
         width: 28%;
         left: 1%;
-        z-index: -1;
+        z-index: 1;
     }
-    .repos {
+    #repos-screen {
         left: 30%;
         width: 40%;
         z-index: -1;
     }
-    .following {
+    #following-screen {
         width: 28%;
         right: 1%;
-        z-index: -1;
+        z-index: 1;
     }
 }
