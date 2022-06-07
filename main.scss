@@ -65,7 +65,7 @@
                 background-color: transparent;
                 outline: none;
             }
-            .button {
+            button {
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -79,6 +79,7 @@
             }
         }
         .output {
+            position: relative;
             width: 100%;
             height: 350px;
             background-color: #1F2947;
@@ -86,17 +87,36 @@
             display: flex;
             padding: 20px;
             margin-bottom: 20px;
-            img {
-                height: 150px;
-                border-radius: 50%;
-                margin: 20px;
-                margin-right: 30px;
+            .ilk-ekran {
+                position: absolute;               
+                height: 90%;
+                width: 100%;
+                background-color: transparent;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                opacity: 1;
+                z-index: 1;
+                h1 {
+                    color: #fff;
+                }
+            }
+            .image {
+                opacity: 0;
+                img {
+                    height: 150px;
+                    border-radius: 50%;
+                    margin: 20px;
+                    margin-right: 30px;
+                }
             }
             .bilgi {
                 width: 100%;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+                opacity: 0;
                 div {
                     .ilk {
                         display: flex;
@@ -117,7 +137,6 @@
                 p {
                     color: #fff;
                 }
-                div {
                     .takip {
                         display: flex;
                         align-items: center;
@@ -166,7 +185,6 @@
                             }
                         }
                     }
-                }
             }
         }
         .last-searchs {
@@ -175,13 +193,30 @@
             background-color: #1F2947;
             border-radius: 10px;
             padding: 10px;
-            h3 {
-                color: #fff;
+            .header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
                 border-bottom: 1px solid #fff;
+                padding: 0;
                 margin-bottom: 10px;
-                margin-left: 10px;
+                h3 {
+                    color: #fff;
+                    margin-left: 10px;
+                }
+                button {
+                    background-color: #037AFF;
+                    border: 0;
+                    border-radius: 10px;
+                    padding-left: 5px;
+                    padding-right: 5px;
+                    color: #fff;
+                    font-weight: 400;
+                    font-size: 13px;
+                    cursor: pointer;
+                }
             }
-            div {
+            .users {
                 display: flex;
                 align-items: center;
                 flex-wrap: wrap;
@@ -209,7 +244,6 @@
         flex-direction: column;
         border-radius: 10px;
         background-color: #1F2947;
-        z-index: 2;
         position: fixed;
         height: 90%;
         .close {
@@ -242,16 +276,16 @@
     .follow {
         width: 28%;
         left: 1%;
-        opacity: 0;
+        z-index: -1;
     }
     .repos {
         left: 30%;
         width: 40%;
-        opacity: 0;
+        z-index: -1;
     }
     .following {
         width: 28%;
         right: 1%;
-        opacity: 0;
+        z-index: -1;
     }
 }

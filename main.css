@@ -107,7 +107,7 @@
   outline: none;
 }
 
-.container .all .search .button {
+.container .all .search button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -127,6 +127,7 @@
 }
 
 .container .all .output {
+  position: relative;
   width: 100%;
   height: 350px;
   background-color: #1F2947;
@@ -138,7 +139,34 @@
   margin-bottom: 20px;
 }
 
-.container .all .output img {
+.container .all .output .ilk-ekran {
+  position: absolute;
+  height: 90%;
+  width: 100%;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  opacity: 1;
+  z-index: 1;
+}
+
+.container .all .output .ilk-ekran h1 {
+  color: #fff;
+}
+
+.container .all .output .image {
+  opacity: 0;
+}
+
+.container .all .output .image img {
   height: 150px;
   border-radius: 50%;
   margin: 20px;
@@ -157,6 +185,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  opacity: 0;
 }
 
 .container .all .output .bilgi div .ilk {
@@ -187,7 +216,7 @@
   color: #fff;
 }
 
-.container .all .output .bilgi div .takip {
+.container .all .output .bilgi .takip {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -205,7 +234,7 @@
   margin-right: 10px;
 }
 
-.container .all .output .bilgi div .takip a {
+.container .all .output .bilgi .takip a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -222,18 +251,18 @@
   text-decoration: none;
 }
 
-.container .all .output .bilgi div .takip a h3 {
+.container .all .output .bilgi .takip a h3 {
   color: #fff;
   font-weight: 400;
   font-size: 14px;
 }
 
-.container .all .output .bilgi div .takip a h2 {
+.container .all .output .bilgi .takip a h2 {
   color: #fff;
   font-size: 22px;
 }
 
-.container .all .output .bilgi div .alt-bilgi {
+.container .all .output .bilgi .alt-bilgi {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -246,7 +275,7 @@
   margin-top: 10px;
 }
 
-.container .all .output .bilgi div .alt-bilgi div {
+.container .all .output .bilgi .alt-bilgi div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -256,7 +285,7 @@
           flex-direction: column;
 }
 
-.container .all .output .bilgi div .alt-bilgi div a {
+.container .all .output .bilgi .alt-bilgi div a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -264,7 +293,7 @@
   text-decoration: none;
 }
 
-.container .all .output .bilgi div .alt-bilgi div a img {
+.container .all .output .bilgi .alt-bilgi div a img {
   height: 20px;
   margin: 0;
   margin-right: 10px;
@@ -278,14 +307,39 @@
   padding: 10px;
 }
 
-.container .all .last-searchs h3 {
-  color: #fff;
+.container .all .last-searchs .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-bottom: 1px solid #fff;
+  padding: 0;
   margin-bottom: 10px;
+}
+
+.container .all .last-searchs .header h3 {
+  color: #fff;
   margin-left: 10px;
 }
 
-.container .all .last-searchs div {
+.container .all .last-searchs .header button {
+  background-color: #037AFF;
+  border: 0;
+  border-radius: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #fff;
+  font-weight: 400;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.container .all .last-searchs .users {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -296,7 +350,7 @@
       flex-wrap: wrap;
 }
 
-.container .all .last-searchs div a {
+.container .all .last-searchs .users a {
   color: #fff;
   text-decoration: none;
   background-color: #131B2D;
@@ -330,7 +384,6 @@
           flex-direction: column;
   border-radius: 10px;
   background-color: #1F2947;
-  z-index: 2;
   position: fixed;
   height: 90%;
 }
@@ -374,18 +427,18 @@
 .repo-follow .follow {
   width: 28%;
   left: 1%;
-  opacity: 0;
+  z-index: -1;
 }
 
 .repo-follow .repos {
   left: 30%;
   width: 40%;
-  opacity: 0;
+  z-index: -1;
 }
 
 .repo-follow .following {
   width: 28%;
   right: 1%;
-  opacity: 0;
+  z-index: -1;
 }
 /*# sourceMappingURL=main.css.map */

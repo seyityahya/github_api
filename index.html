@@ -14,77 +14,79 @@
                 <a href="#github.com"><img src="image/icons8-github.svg" alt=""></a>
                 <p>Github</p>
             </div>
-            <div class="search">
+            <form class="search" id="github-form">
                 <i><img src="image/icon-search.svg" alt=""></i>
-                <input type="text" class="input" placeholder="Kullanıcı Ara...">
-                <div class="button">Search</div>
-            </div>
+                <input type="text" class="input" placeholder="Kullanıcı Ara..." id="githubname">
+                <button>search</button>
+            </form>
             <div class="output">
-                <img src="image/antreman 19.png" alt="">
-                <div class="bilgi">
-                    <div>
-                        <div class="ilk">
+                <div class="ilk-ekran" id="ilk-ekran">
+                    <h1>Github Kullanıcı Adını yazarak bilgilerine ulaşabilirsin.</h1>
+                </div>
+                <div class="image" id="image">
+                    <!-- <img src="image/antreman 19.png" alt=""> -->
+                </div>
+                <div class="bilgi" id="profile">
+                    <div class="isim" id="isim">
+                        <!-- <div class="ilk">
                             <h2>Seyit Yahya</h2>
                             <p>joined 13/12/21</p>
                         </div>
-                        <h5>seyityahya</h5>
+                        <h5>seyityahya</h5> -->
                     </div>
-                    <p>This profile has no bio...</p>
-                    <div>
-                        <div class="takip">
-                            <a href="">
-                                <h3>Followers</h3>
-                                <h2>2</h2>
-                            </a>
-                            <a href="">
-                                <h3>Repos</h2>
-                                    <h2>9</h2>
-                            </a>
-                            <a href="">
-                                <h3>Following</h3>
-                                <h2>13</h2>
-                            </a>
-                        </div>
-                        <div class="alt-bilgi">
-                            <div>
-                                <a href="">
-                                    <img src="image/location2.png" alt="" class="deneme">
-                                    Düzce
+                    <p id="bio"></p>
+                    <div class="takip">
+                        <a href="" id="followers">
+                            <!-- <h3>Followers</h3> -->
+                                <!-- <h2>2</h2> -->
+                        </a>
+                        <a href="" id="repos">
+                            <!-- <h3>Repos</h3> -->
+                                    <!-- <h2>9</h2> -->
+                        </a>
+                        <a href="" id="following">
+                            <!-- <h3>Following</h3> -->
+                                <!-- <h2>13</h2> -->
+                        </a>
+                    </div>
+                    <div class="alt-bilgi" id="alt-bilgi">
+                        <!--<div>
+                                 <a href="">
+                                    <img src="image/location2.png" alt="">
+                                    
                                 </a>
                                 <a href="">
                                     <img src="image/company .png" alt="">
-                                    Şirket
-                                </a>
+                                    
+                                </a> 
                             </div>
                             <div>
-                                <a href="">
+                                <a href="www.twitter.com" id="twitter">
                                     <img src="image/twitter.svg" alt="">
-                                    Twitter
+                                    
                                 </a>
-                                <a href="">
+                                <a href="" id="website">
                                     <img src="image/website.png" alt="">
-                                    seyityahya05
+                                    
                                 </a>
-                            </div>
-                        </div>
+                            </div>-->
+
                     </div>
                 </div>
             </div>
             <div class="last-searchs">
-                <h3>Son Arananlar</h3>
-                <div>
+                <div class="header">
+                    <h3>Son Arananlar</h3>
+                    <button id="clear-last-users">Son Arananları Temizle</button>
+                </div>
+                <div class="users" id="last-users">
                     <a href="">seyityahya</a>
-                <a href="">seyityahya</a>
-                <a href="">akaanuzman</a>
-                <a href="">akaanuzman</a>
-                <a href="">mustafamuratcoskun</a>
-                <a href="">enesgucukoglu</a>
                 </div>
             </div>
         </div>
         <div class="repo-follow">
             <div class="follow">
-                <a href="" class="close">
+                <a href="" class="close" id="followers-close">
                     <img src="image/close.svg" alt="">
                 </a>
                 <h3>Followers</h3>
@@ -93,7 +95,7 @@
                 <a href="">akaanuzman</a>
             </div>
             <div class="repos">
-                <a href="" class="close">
+                <a href="" class="close" id="repos-close">
                     <img src="image/close.svg" alt="">
                 </a>
                 <h3>Repositories</h3>
@@ -102,7 +104,7 @@
                 <a href="">100_front_project</a>
             </div>
             <div class="following">
-                <a href="" class="close">
+                <a href="" class="close" id="following-close">
                     <img src="image/close.svg" alt="">
                 </a>
                 <h3>Following</h3>
@@ -114,8 +116,18 @@
     </div>
 
 
+    <script src="javascript/github.js"></script>
+    <script src="javascript/storage.js"></script>
+    <script src="javascript/ui.js"></script>
+
+    <script src="javascript/app.js"></script>
 
 
-
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
 </body>
 </html>
