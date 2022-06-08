@@ -28,6 +28,9 @@ function eventListeners() {
     follow.addEventListener("click",followersActive);
     repos.addEventListener("click",reposActive);
     following.addEventListener("click",followingActive);
+    followersClose.addEventListener("click",followersNotActive);
+    reposClose.addEventListener("click",reposNotActive);
+    followingClose.addEventListener("click",followingNotActive);
 }
 
 function getData(e) {
@@ -70,10 +73,19 @@ function getAllSearched() {
 
 function followersActive() {
     followersScreen.style.zIndex = 1;
-}
+ }
 function reposActive() {
     reposScreen.style.zIndex = 1;
-}
+ }
 function followingActive() {
     followingScreen.style.zIndex =1;
+ }
+function followersNotActive() {
+    followersScreen.style.zIndex =-1;
+}
+function reposNotActive() {
+    reposScreen.style.zIndex =-1;
+}
+function followingNotActive() {
+    followingScreen.style.zIndex =-1;
 }

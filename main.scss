@@ -15,7 +15,7 @@
     justify-content: center;
     align-items: center;
     .all {
-        width: 650px;
+        width: 750px;
         height: 90%;
         padding: 25px;
         .header {
@@ -90,7 +90,7 @@
             .ilk-ekran {
                 position: absolute;               
                 height: 90%;
-                width: 100%;
+                width: 95%;
                 background-color: transparent;
                 display: flex;
                 justify-content: center;
@@ -147,12 +147,13 @@
                         padding-left: 25px;
                         padding-right: 25px;
                         margin-right: 10px;
-                        a {
+                        div {
                             display: flex;
                             justify-content: center;
                             align-items: center;
                             flex-direction: column;
                             text-decoration: none;
+                            cursor: pointer;
                             h3 {
                                 color: #fff;
                                 font-weight: 400;
@@ -261,6 +262,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            cursor: pointer;
             img {
                 color: #fff;
                 width: 20px;
@@ -282,18 +284,18 @@
         } 
     }
     #follow-screen {
-        width: 28%;
+        width: 25%;
         left: 1%;
-        z-index: 1;
+        z-index: -1;
     }
     #repos-screen {
-        left: 30%;
-        width: 40%;
+        left: 27%;
+        width: 46%;
         z-index: -1;
     }
     #following-screen {
-        width: 28%;
+        width: 25%;
         right: 1%;
-        z-index: 1;
+        z-index: -1;
     }
 }

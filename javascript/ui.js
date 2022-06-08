@@ -79,9 +79,9 @@ class UI {
     showRepoInfo(repos) {
         this.reposAdd.innerHTML = "";
 
-        repos.forEach(repo => {
-            this.reposAdd.inner += `
-            <a href="${repo.html_url}">${repo.name}</a>
+        repos.forEach(repos => {
+            this.reposAdd.innerHTML += `
+            <a href="${repos.html_url}">${repos.name}</a>
             `
         });
 
