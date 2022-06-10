@@ -5,9 +5,7 @@ const profile = document.getElementById("profile");
 const follow = document.getElementById("followers");
 const repos = document.getElementById("repos");
 const following = document.getElementById("following");
-const website = document.getElementById("website");
 const clearLastUsers = document.getElementById("clear-last-users");
-const lastUsers = document.getElementById("last-users");
 const followingClose = document.getElementById("following-close");
 const reposClose = document.getElementById("repos-close");
 const followersClose = document.getElementById("followers-close");
@@ -15,6 +13,7 @@ const img = document.getElementById("image");
 const followersScreen = document.getElementById("follow-screen");
 const reposScreen = document.getElementById("repos-screen");
 const followingScreen = document.getElementById("following-screen");
+const lastUsers = document.getElementById("last-users");
 
 const github = new Github();
 const ui = new UI();
@@ -50,6 +49,8 @@ function getData(e) {
                 ilkEkran.style.zIndex = -1;
                 profile.style.opacity = 1;
                 img.style.opacity = 1;
+                ui.addSearchedUserToUI(username);
+                Storage.addSearchedUserToStorage(username);
                 ui.showUserInfo(response.user);
                 ui.showRepoInfo(response.repo);
                 ui.showFollowersInfo(response.followers);
@@ -65,14 +66,29 @@ function getData(e) {
 
 function clearAllSearched() {
     //Tüm arananları temizle
+    if (confirm("emin misiniz ?")) {
+        Storage.clearAllSearchedUsersFromStorage();
+        ui.clearAllSearchedFromUI();
+    }
 }
 
 function getAllSearched() {
     //Arananları Storagedan al ve ui ye ekle
+
+    let users = Storage.getSearchedUsersFromStorage();
+
+    users.forEach(user => {
+        lastUsers.innerHTML += `<a href="https://github.com/${user}">${user}</a>`
+    });
 }
 
 function followersActive() {
-    followersScreen.style.zIndex = 1;
+    if (followersScreen.style.zIndex === 1) {
+        followersScreen.style.zIndex = -1;
+    }
+    else {
+        followersScreen.style.zIndex = 1;
+    }
  }
 function reposActive() {
     reposScreen.style.zIndex = 1;

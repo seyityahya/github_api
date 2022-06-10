@@ -11,6 +11,7 @@ class UI {
         this.reposAdd = document.getElementById("repos-add");
         this.followersAdd = document.getElementById("followers-add");
         this.followingAdd = document.getElementById("following-add");
+        this.lastUsers = document.getElementById("last-users");
     }
     clearInput() {
         this.inpustField.value = "";
@@ -65,11 +66,11 @@ class UI {
             </a> 
         </div>
         <div>
-            <a href="${user.blog}">
+            <a target="_blank" href="${user.blog}">
                 <img src="image/website.png" alt="">
                 ${user.blog}                   
             </a>
-            <a href="https://twitter.com/${user.twitter_username}">
+            <a target="_blank" href="https://twitter.com/${user.twitter_username}">
                 <img src="image/twitter.svg" alt="">
                 ${user.twitter_username}                   
             </a>
@@ -81,10 +82,9 @@ class UI {
 
         repos.forEach(repos => {
             this.reposAdd.innerHTML += `
-            <a href="${repos.html_url}">${repos.name}</a>
+            <a target="_blank" href="${repos.html_url}">${repos.name}</a>
             `
         });
-
     }
 
     showFollowersInfo(follows) {
@@ -92,7 +92,7 @@ class UI {
 
         follows.forEach(follows => {
             this.followersAdd.innerHTML += `
-            <a href="${follows.html_url}">${follows.login}</a>
+            <a target="_blank" href="${follows.html_url}">${follows.login}</a>
             `
         });
     }
@@ -102,8 +102,25 @@ class UI {
 
         following.forEach(following => {
             this.followingAdd.innerHTML += `
-            <a href="${following.html_url}">${following.login}</a>
+            <a target="_blank" href="${following.html_url}">${following.login}</a>
             `
         });
+    }
+
+    addSearchedUserToUI(username) {
+        let users = Storage.getSearchedUsersFromStorage();
+
+        if (users.indexOf(username) === -1) {
+
+            this.lastUsers.innerHTML +=`
+            <a href="https://github.com/${username}">${username}</a>
+            `
+        }
+    }
+
+    clearAllSearchedFromUI() {
+        while(this.lastUsers.firstElementChild !== null){
+            this.lastUsers.removeChild(this.lastUsers.firstElementChild);
+        }
     }
 }
