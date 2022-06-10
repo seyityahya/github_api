@@ -386,7 +386,12 @@
   border-radius: 10px;
   background-color: #1F2947;
   position: fixed;
-  height: 90%;
+  -webkit-transition-duration: 0.7s;
+          transition-duration: 0.7s;
+  -webkit-transition-property: height;
+  transition-property: height;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
   overflow-y: scroll;
 }
 
@@ -419,6 +424,11 @@
   width: 20px;
 }
 
+.repo-follow .repos .close:hover {
+  background-color: #037AFF;
+  border: 0;
+}
+
 .repo-follow .repos h3 {
   color: #fff;
   border-bottom: 1px solid #fff;
@@ -442,18 +452,21 @@
 }
 
 .repo-follow #follow-screen {
+  height: 30%;
   width: 25%;
   left: 1%;
   z-index: -1;
 }
 
 .repo-follow #repos-screen {
+  height: 30%;
   left: 27%;
   width: 46%;
   z-index: -1;
 }
 
 .repo-follow #following-screen {
+  height: 30%;
   width: 25%;
   right: 1%;
   z-index: -1;

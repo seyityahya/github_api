@@ -83,25 +83,33 @@ function getAllSearched() {
 }
 
 function followersActive() {
-    if (followersScreen.style.zIndex === 1) {
-        followersScreen.style.zIndex = -1;
-    }
-    else {
-        followersScreen.style.zIndex = 1;
-    }
+    followersScreen.style.height = 90 + "%";
+    followersScreen.style.zIndex = 1;
+
  }
 function reposActive() {
+    reposScreen.style.height = 90 + "%";
     reposScreen.style.zIndex = 1;
  }
 function followingActive() {
-    followingScreen.style.zIndex =1;
+    followingScreen.style.height = 90 + "%";
+    followingScreen.style.zIndex = 1;
  }
 function followersNotActive() {
-    followersScreen.style.zIndex =-1;
+    followersScreen.style.height = 30 + "%";
+    setTimeout(function() {
+        followersScreen.style.zIndex = -1;
+    },500);
 }
 function reposNotActive() {
-    reposScreen.style.zIndex =-1;
+    reposScreen.style.height = 30 + "%";
+    setTimeout(function() {
+        reposScreen.style.zIndex = -1;
+    },500);
 }
 function followingNotActive() {
-    followingScreen.style.zIndex =-1;
+    followingScreen.style.height = 30 + "%";
+    setTimeout(function() {
+        followingScreen.style.zIndex = -1;
+    },500);
 }
