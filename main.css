@@ -107,25 +107,6 @@
   outline: none;
 }
 
-.container .all .search button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 60px;
-  height: 70%;
-  background-color: #037AFF;
-  border-radius: 6px;
-  font-size: 10px;
-  color: #fff;
-  cursor: pointer;
-}
-
 .container .all .output {
   position: relative;
   width: 100%;
@@ -393,6 +374,8 @@
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
   overflow-y: scroll;
+  -webkit-box-shadow: 4px 3px 10px #000;
+          box-shadow: 4px 3px 10px #000;
 }
 
 .repo-follow .repos::-webkit-scrollbar {
@@ -449,6 +432,45 @@
   color: #fff;
   text-decoration: none;
   margin-bottom: 10px;
+}
+
+.repo-follow .repos div .star-fork {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.repo-follow .repos div .star-fork .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.repo-follow .repos div .star-fork .right button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 10px;
+  border-radius: 5px;
+  height: 22px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: #037AFF;
+  color: #fff;
 }
 
 .repo-follow #follow-screen {

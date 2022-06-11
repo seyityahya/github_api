@@ -82,7 +82,17 @@ class UI {
 
         repos.forEach(repos => {
             this.reposAdd.innerHTML += `
-            <a target="_blank" href="${repos.html_url}">${repos.name}</a>
+            <div class="star-fork">
+                <a target="_blank" href="${repos.html_url}">${repos.name}</a>    
+                    <div class="right">
+                        <button class="star">
+                            star ${repos.stargazers_count}
+                        </button>
+                        <button class="fork">
+                            fork ${repos.forks_count}
+                        </button>
+                    </div>
+            </div>
             `
         });
     }
@@ -113,7 +123,7 @@ class UI {
         if (users.indexOf(username) === -1) {
 
             this.lastUsers.innerHTML +=`
-            <a href="https://github.com/${username}">${username}</a>
+            <a target="_blank" href="https://github.com/${username}">${username}</a>
             `
         }
     }

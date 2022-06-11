@@ -53,8 +53,7 @@
                 position: absolute;
                 img {
                     width: 28px;
-                }
-                
+                }                
             }
             input {
                 width: 100%;
@@ -64,18 +63,6 @@
                 color: #fff;
                 background-color: transparent;
                 outline: none;
-            }
-            button {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 60px;
-                height: 70%;
-                background-color: #037AFF;
-                border-radius: 6px;
-                font-size: 10px;
-                color: #fff;
-                cursor: pointer;
             }
         }
         .output {
@@ -250,6 +237,7 @@
         transition-property: height;
         transition-timing-function: ease-out;
         overflow-y: scroll;
+        box-shadow: 4px 3px 10px #000;
         &::-webkit-scrollbar {
             -webkit-appearance: none;
         }
@@ -287,6 +275,26 @@
                 color: #fff;
                 text-decoration: none;
                 margin-bottom: 10px;
+            }
+            .star-fork {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row;
+                .right {
+                    display: flex;
+                    flex-direction: row;
+                    button {
+                        display: flex;
+                        align-items: center;
+                        margin-right: 10px;
+                        border-radius: 5px;
+                        height: 22px;
+                        padding-left: 5px;
+                        padding-right: 5px;
+                        background-color: #037AFF;
+                        color: #fff;
+                    }
+                }
             } 
         } 
     }
