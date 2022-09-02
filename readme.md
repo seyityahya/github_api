@@ -47,8 +47,3 @@ This api contains the followers information : https://api.github.com/users/seyit
 This api contains the following information : https://api.github.com/users/seyityahya/following
 
 
------------------
-
-<video width="640" height="480" controls>
-  <source src="image/tanitim.mp4" type="video/mp4">
-</video>
